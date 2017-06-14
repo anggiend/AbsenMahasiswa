@@ -14,12 +14,14 @@ var app_routing_module_1 = require("./app-routing.module");
 var home_component_1 = require("./home/home.component");
 var login_component_1 = require("./login/login.component");
 var tampilanmhs_component_1 = require("./tampilanmhs/tampilanmhs.component");
-var login_service_1 = require("./_services/login.service");
 var rekap_component_1 = require("./rekapitulasi/rekap.component");
-var mhs_service_1 = require("./_services/mhs.service");
-var kelas_service_1 = require("./_services/kelas.service");
 var isi_component_1 = require("./isi/isi.component");
 var edit_component_1 = require("./edit/edit.component");
+var rekap_service_1 = require("./_services/rekap.service");
+var data_service_1 = require("./_services/data.service");
+var mhs_service_1 = require("./_services/mhs.service");
+var kelas_service_1 = require("./_services/kelas.service");
+var login_service_1 = require("./_services/login.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -46,7 +48,9 @@ AppModule = __decorate([
         providers: [
             login_service_1.LoginService,
             mhs_service_1.MhsService,
-            kelas_service_1.KelasService
+            kelas_service_1.KelasService,
+            rekap_service_1.RekapService,
+            data_service_1.DataService
         ],
         bootstrap: [app_component_1.AppComponent]
     })

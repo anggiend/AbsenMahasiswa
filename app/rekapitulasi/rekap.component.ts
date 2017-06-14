@@ -3,10 +3,11 @@ import { Router } from '@angular/router';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map'
-import { Mahasiswa } from '../_models/mahasiswa';
 
-//import { DataService } from '../service/data.service';
+import { Mahasiswa } from '../_models/rekap.model';
+
 import { RekapService } from '../_services/rekap.service';
+import { DataService } from '../_services/data.service';
 
 @Component({
   moduleId: module.id,
@@ -22,39 +23,21 @@ import { RekapService } from '../_services/rekap.service';
 
 export class RekapComponent implements OnInit {
   
-  //dataMhs = [];
-  //MHS = [];
-  private mhs: Mahasiswa[];
-  private keymahasiswa: "mahasiswa";
- 
-	constructor(
-      private router: Router, 
-      private rekapService: RekapService,
-      private http: Http,
-	) { }
-	
-	ngOnInit() {
-			/*this.rekapService.httpMhs().subscribe(
-				(data) => this.dataMhs = data.slice(1, 5)
-				);
-			this.rekapService.httpMhs().subscribe(
-				(data) => this.MHS = data
-			);*/
+  
+  recordRekap = [];
+  Rekap:  Mahasiswa[] = [];
 
-	}
-/*
-		   if (localStorage.getItem(this.keymahasiswa) === null || localStorage.getItem(this.keymahasiswa) === undefined){
-			  this.getMahasiswa();
-			} else {
-			  this.mhs = JSON.parse(localStorage.getItem(this.keymahasiswa));
-			  console.log("ISI CATEGORY HOME" + localStorage.getItem(this.keymahasiswa));
-			}
-		  }
+  constructor(private router: Router, private rekapService: RekapService, private dataService: DataService, private http: Http,) {}
 
-		  getMahasiswa(): void {
-			console.log("DATA FROM SERVER");
-			this.mhsService.getMahasiwa().subscribe(mahasiswa => { 
-			  this.mhs = mahasiswa; localStorage.setItem(this.keymahasiswa, JSON.stringify(mahasiswa)); }, error => console.log(error));
-		  }
-*/
+
+  ngOnInit() {
+
+   this.Rekap = this.rekapService.getListRekap();
+
+   this.dataService.httpRekap().subscribe(
+      (data) => this.recordRekap = data
+    );
+
+
+  }
 }

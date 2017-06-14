@@ -167,18 +167,16 @@
                                         <tr>
                                             <th>NIM</th>
                                             <th>Nama</th>
-                                            <th>Tanggal</th>
                                             <th>Jumlah Jam</th>
                                             <th>Keterangan</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr *ngFor="let item of MHS">
+                                        <tr *ngFor="let item of recordRekap">
                                             <td>{{item.nim}}</td>
                                             <td>{{item.nama}}</td>
-                                            <td>{{item.tanggal}}</td>
-                                            <td class="text-center">{{item.jam}}</td>
-                                            <td>{{item.ket}}</td>
+                                            <td class="text-center">{{item.totaljam}}</td>
+                                            <td>{{item.keterangan}}</td>
                                         </tr>
                                         
                                     </tbody>

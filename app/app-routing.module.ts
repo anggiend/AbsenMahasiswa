@@ -7,7 +7,9 @@ import { TampilanMhsComponent }		from './tampilanmhs/tampilanmhs.component';
 import { RekapComponent }		from './rekapitulasi/rekap.component';
 import { IsiComponent } from './isi/isi.component';
 import { EditComponent } from './edit/edit.component';
+
 const routes: Routes = [
+
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home',  component: HomeComponent },
   { path: 'login',  component: LoginComponent},
@@ -16,6 +18,7 @@ const routes: Routes = [
   { path : 'edit/:nim/:tanggal', component: IsiComponent},
   { path : 'absen', component: EditComponent},
   { path : 'input', component: IsiComponent},
+  
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 

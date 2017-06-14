@@ -12,21 +12,21 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
-//import { DataService } from '../service/data.service';
 var rekap_service_1 = require("../_services/rekap.service");
+var data_service_1 = require("../_services/data.service");
 var RekapComponent = (function () {
-    function RekapComponent(router, rekapService, http) {
+    function RekapComponent(router, rekapService, dataService, http) {
         this.router = router;
         this.rekapService = rekapService;
+        this.dataService = dataService;
         this.http = http;
+        this.recordRekap = [];
+        this.Rekap = [];
     }
     RekapComponent.prototype.ngOnInit = function () {
-        /*this.rekapService.httpMhs().subscribe(
-            (data) => this.dataMhs = data.slice(1, 5)
-            );
-        this.rekapService.httpMhs().subscribe(
-            (data) => this.MHS = data
-        );*/
+        var _this = this;
+        this.Rekap = this.rekapService.getListRekap();
+        this.dataService.httpRekap().subscribe(function (data) { return _this.recordRekap = data; });
     };
     return RekapComponent;
 }());
@@ -42,9 +42,7 @@ RekapComponent = __decorate([
         ],
         providers: [rekap_service_1.RekapService]
     }),
-    __metadata("design:paramtypes", [router_1.Router,
-        rekap_service_1.RekapService,
-        http_1.Http])
+    __metadata("design:paramtypes", [router_1.Router, rekap_service_1.RekapService, data_service_1.DataService, http_1.Http])
 ], RekapComponent);
 exports.RekapComponent = RekapComponent;
 //# sourceMappingURL=rekap.component.js.map
