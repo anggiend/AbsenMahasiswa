@@ -8,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var tampilanmhs_service_1 = require('../_services/tampilanmhs.service');
-var core_2 = require('@angular/core');
+var core_1 = require("@angular/core");
+var tampilanmhs_service_1 = require("../_services/tampilanmhs.service");
+var core_2 = require("@angular/core");
 core_2.enableProdMode();
 var TampilanMhsComponent = (function () {
     function TampilanMhsComponent(tampilanmhsService) {
@@ -26,22 +26,22 @@ var TampilanMhsComponent = (function () {
             .subscribe(function (mhs) { _this.riwayat = mhs; }, function (error) { return console.log(error); });
         console.log(this.riwayat.sakit);
     };
-    TampilanMhsComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'tampilanmhs',
-            templateUrl: 'tampilanmhs.component.html',
-            styleUrls: ['../../css/vendor/bootstrap/css/bootstrap.min.css',
-                '../../css/vendor/metisMenu/metisMenu.min.css',
-                '../../css/dist/css/sb-admin-2.css',
-                '../../css/vendor/morrisjs/morris.css',
-                './tampilanmhs.component.css'
-            ],
-            providers: [tampilanmhs_service_1.TampilanmhsService]
-        }), 
-        __metadata('design:paramtypes', [tampilanmhs_service_1.TampilanmhsService])
-    ], TampilanMhsComponent);
     return TampilanMhsComponent;
 }());
+TampilanMhsComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'tampilanmhs',
+        templateUrl: 'tampilanmhs.component.html',
+        styleUrls: ['../../css/vendor/bootstrap/css/bootstrap.min.css',
+            '../../css/vendor/metisMenu/metisMenu.min.css',
+            '../../css/dist/css/sb-admin-2.css',
+            '../../css/vendor/morrisjs/morris.css',
+            './tampilanmhs.component.css'
+        ],
+        providers: [tampilanmhs_service_1.TampilanmhsService]
+    }),
+    __metadata("design:paramtypes", [tampilanmhs_service_1.TampilanmhsService])
+], TampilanMhsComponent);
 exports.TampilanMhsComponent = TampilanMhsComponent;
 //# sourceMappingURL=tampilanmhs.component.js.map

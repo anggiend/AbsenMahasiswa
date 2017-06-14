@@ -8,9 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var login_service_1 = require('../_services/login.service');
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var login_service_1 = require("../_services/login.service");
 var LoginComponent = (function () {
     function LoginComponent(router, loginservice) {
         this.router = router;
@@ -43,19 +43,20 @@ var LoginComponent = (function () {
     LoginComponent.prototype.gotoTampilanMhs = function () {
         this.router.navigate(['/tampilanmhs/']);
     };
-    LoginComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'login',
-            templateUrl: 'login.component.html',
-            styleUrls: ['../../css/vendor/bootstrap/css/bootstrap.min.css',
-                '../../css/vendor/metisMenu/metisMenu.min.css',
-                '../../css/dist/css/sb-admin-2.css',
-            ]
-        }), 
-        __metadata('design:paramtypes', [router_1.Router, login_service_1.LoginService])
-    ], LoginComponent);
     return LoginComponent;
 }());
+LoginComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'login',
+        templateUrl: 'login.component.html',
+        styleUrls: ['../../css/vendor/bootstrap/css/bootstrap.min.css',
+            '../../css/vendor/metisMenu/metisMenu.min.css',
+            '../../css/dist/css/sb-admin-2.css',
+        ]
+    }),
+    __metadata("design:paramtypes", [router_1.Router,
+        login_service_1.LoginService])
+], LoginComponent);
 exports.LoginComponent = LoginComponent;
 //# sourceMappingURL=login.component.js.map

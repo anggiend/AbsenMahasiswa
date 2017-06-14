@@ -8,12 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var http_1 = require('@angular/http');
-require('rxjs/add/operator/map');
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/map");
 //import { DataService } from '../service/data.service';
-var rekap_service_1 = require('../_services/rekap.service');
+var rekap_service_1 = require("../_services/rekap.service");
 var RekapComponent = (function () {
     function RekapComponent(router, rekapService, http) {
         this.router = router;
@@ -28,21 +28,23 @@ var RekapComponent = (function () {
             (data) => this.MHS = data
         );*/
     };
-    RekapComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            selector: 'rekap',
-            templateUrl: 'rekap.component.html',
-            styleUrls: ['../../css/vendor/bootstrap/css/bootstrap.min.css',
-                '../../css/vendor/metisMenu/metisMenu.min.css',
-                '../../css/dist/css/sb-admin-2.css',
-                '../../css/vendor/morrisjs/morris.css',
-            ],
-            providers: [rekap_service_1.RekapService]
-        }), 
-        __metadata('design:paramtypes', [router_1.Router, rekap_service_1.RekapService, http_1.Http])
-    ], RekapComponent);
     return RekapComponent;
 }());
+RekapComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'rekap',
+        templateUrl: 'rekap.component.html',
+        styleUrls: ['../../css/vendor/bootstrap/css/bootstrap.min.css',
+            '../../css/vendor/metisMenu/metisMenu.min.css',
+            '../../css/dist/css/sb-admin-2.css',
+            '../../css/vendor/morrisjs/morris.css',
+        ],
+        providers: [rekap_service_1.RekapService]
+    }),
+    __metadata("design:paramtypes", [router_1.Router,
+        rekap_service_1.RekapService,
+        http_1.Http])
+], RekapComponent);
 exports.RekapComponent = RekapComponent;
 //# sourceMappingURL=rekap.component.js.map

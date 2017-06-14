@@ -8,12 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-require('rxjs/add/operator/map');
-require('rxjs/add/operator/toPromise');
-require('rxjs/add/operator/catch');
-require('rxjs/add/observable/from');
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/map");
+require("rxjs/add/operator/toPromise");
+require("rxjs/add/operator/catch");
+require("rxjs/add/observable/from");
 //import { Mahasiswa } from '../model/rekap.model';
 var RekapService = (function () {
     //  private Mhs: Mahasiswa[] = [];
@@ -41,11 +41,11 @@ var RekapService = (function () {
     RekapService.prototype.httpMhs = function () {
         return this.http.get('http://localhost:2002/Mahasiswa/?format=json').map(function (res) { return res.json(); });
     };
-    RekapService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], RekapService);
     return RekapService;
 }());
+RekapService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], RekapService);
 exports.RekapService = RekapService;
 //# sourceMappingURL=rekap.service.js.map

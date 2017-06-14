@@ -8,12 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var mhs_service_1 = require('../_services/mhs.service');
-var kelas_service_1 = require('../_services/kelas.service');
-require('rxjs/add/operator/map');
-require('rxjs/add/operator/min');
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var mhs_service_1 = require("../_services/mhs.service");
+var kelas_service_1 = require("../_services/kelas.service");
+require("rxjs/add/operator/map");
+require("rxjs/add/operator/min");
 var EditComponent = (function () {
     function EditComponent(router, mhsService, kelasService) {
         this.router = router;
@@ -45,22 +45,22 @@ var EditComponent = (function () {
     EditComponent.prototype.onSelect = function (mhs) {
         this.selectedMhs = mhs;
     };
-    EditComponent = __decorate([
-        core_1.Component({
-            moduleId: module.id,
-            providers: [mhs_service_1.MhsService],
-            selector: 'edit',
-            templateUrl: 'edit.component.html',
-            styleUrls: ['../../css/vendor/bootstrap/css/bootstrap.min.css',
-                '../../css/vendor/metisMenu/metisMenu.min.css',
-                '../../css/dist/css/sb-admin-2.css',
-                '../../css/vendor/morrisjs/morris.css',
-            ]
-        }),
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [router_1.Router, mhs_service_1.MhsService, kelas_service_1.KelasService])
-    ], EditComponent);
     return EditComponent;
 }());
+EditComponent = __decorate([
+    core_1.Component({
+        moduleId: module.id,
+        providers: [mhs_service_1.MhsService],
+        selector: 'edit',
+        templateUrl: 'edit.component.html',
+        styleUrls: ['../../css/vendor/bootstrap/css/bootstrap.min.css',
+            '../../css/vendor/metisMenu/metisMenu.min.css',
+            '../../css/dist/css/sb-admin-2.css',
+            '../../css/vendor/morrisjs/morris.css',
+        ]
+    }),
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [router_1.Router, mhs_service_1.MhsService, kelas_service_1.KelasService])
+], EditComponent);
 exports.EditComponent = EditComponent;
 //# sourceMappingURL=edit.component.js.map
